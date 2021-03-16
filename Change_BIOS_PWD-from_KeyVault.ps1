@@ -301,7 +301,7 @@ If(($Is_Module_Present -eq $True) -and ($Is_Cert_Installed -eq $True))
 										Try
 										{
 											$PasswordSet = Get-WmiObject -Namespace root\wmi -Class Lenovo_SetBiosPassword
-											$PasswordSet.SetBiosPassword("pap,$Old_PWD,$New_PWD,ascii,fr") | out-null			
+											$PasswordSet.SetBiosPassword("pap,$Old_PWD,$New_PWD,ascii,us") | out-null			
 											Write_Log -Message_Type "SUCCESS" -Message "BIOS password has been changed"	
 											write-output "Change password: Success"						
 											EXIT 0					
